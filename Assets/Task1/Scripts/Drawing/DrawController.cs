@@ -60,7 +60,6 @@ namespace Task1
         #region Private Methods
         private void StartLine()
         {
-            _newMesh.mesh.Clear();
             if (_drawingCoroutine != null)
             {
                 StopCoroutine(_drawingCoroutine);
