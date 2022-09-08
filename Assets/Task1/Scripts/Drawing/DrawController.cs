@@ -78,7 +78,7 @@ namespace Task1
 
         private void AddMeshPosition()
         {
-            for (int i = 0; i < _line.positionCount; i+=2 )
+            for (int i = 0; i < _line.positionCount; i += 2)
             {
                 _meshPositions.Add(_line.GetPosition(i));
             }

@@ -8,13 +8,19 @@ namespace Task1
     [RequireComponent(typeof(MeshRenderer))]
     public class MeshCombiner : MonoBehaviour
     {
+        #region Private Field
         private MeshFilter _meshFilter;
+        #endregion
 
+        #region Start
         private void Start()
         {
             _meshFilter = GetComponent<MeshFilter>();
             DrawController.Instance.meshCombine += CombineMesh;
         }
+        #endregion
+
+        #region Method
         private void CombineMesh()
         {
             MeshFilter[] meshFilters = GetComponentsInChildren<MeshFilter>();
@@ -36,5 +42,6 @@ namespace Task1
                 Destroy(transform.GetChild(i).gameObject);
             }
         }
+        #endregion
     }
 }
